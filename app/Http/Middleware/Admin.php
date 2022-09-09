@@ -16,9 +16,10 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
+        //if user is not logged in or not admin
         if(!auth()->check() || !auth()->user()->is_admin) {
-            abort(403)
-;        }
+            abort(403);
+        }
         return $next($request);
     }
 }
