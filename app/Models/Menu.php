@@ -10,6 +10,13 @@ class Menu extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'image',
+        'description',
+        'price',
+    ];
+
     /**
      * The categories that belong to the Menu
      *
