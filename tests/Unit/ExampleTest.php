@@ -1,4 +1,4 @@
-<?php
+"""<?php
 
 namespace Tests\Unit;
 
@@ -14,5 +14,10 @@ class ExampleTest extends TestCase
     public function test_that_true_is_true()
     {
         $this->assertTrue(true);
+    }
+    
+    public function test_category_has_menu()
+    {
+        $this->assertTrue(App/Models/CategoryModel::hasMany(App/Models/MenuModel))
     }
 }
